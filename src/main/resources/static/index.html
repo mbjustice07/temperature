@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="temperature.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div>Temperature</div>
+<div id="temperature">
+    <div id="getList">
+        <button type="button" onclick="getList()">Update Table</button>
+    </div>
+    <div id="addTemp">
+        <form>
+            <input id="addVal" value="temp" type="text">
+            <button type="button" onclick="addTemp(document.getElementById('addVal').value)">Add Temperature</button>
+        </form>
+    </div>
+    <div id="updateT">
+        <form>
+            <input id="updateId" value="id" type="text">
+            <input id="uTemp" value="temp" type="text">
+            <button type="button" onclick="updateTemp(document.getElementById('updateId').value,document.getElementById('uTemp').value)">Update Temperature</button>
+        </form>
+    </div>
+    <div id="deleteTemp">
+        <form>
+            <input id="deleteVal" value="id" type="text">
+            <button type="button" onclick="deleteTemp(document.getElementById('deleteVal').value)">Delete Temperature</button>
+        </form>
+    </div>
+    <div >
+        <table id="temperatureTable">
+            <tr>
+                <th>Temp Unit</th>
+                <th>Temp</th>
+                <th>ID</th>
+                <th>Create Date</th>
+                <th>Update Date</th>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
